@@ -2,6 +2,14 @@ version = 1
 revision = 3
 requires-python = ">=3.13"
 
+[manifest]
+members = [
+    "diff-gaussian-rasterization",
+    "fused-ssim",
+    "gaussian-splatting",
+    "simple-knn",
+]
+
 [[package]]
 name = "colorama"
 version = "0.4.6"
@@ -34,6 +42,17 @@ wheels = [
 ]
 
 [[package]]
+name = "diff-gaussian-rasterization"
+version = "0.1.0"
+source = { editable = "submodules/diff-gaussian-rasterization" }
+dependencies = [
+    { name = "torch" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "torch" }]
+
+[[package]]
 name = "filelock"
 version = "3.25.0"
 source = { registry = "https://pypi.org/simple" }
@@ -52,14 +71,27 @@ wheels = [
 ]
 
 [[package]]
+name = "fused-ssim"
+version = "1.0.0"
+source = { editable = "submodules/fused-ssim" }
+dependencies = [
+    { name = "torch" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "torch", specifier = ">=2.0.0" }]
+
+[[package]]
 name = "gaussian-splatting"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "fused-ssim" },
     { name = "joblib" },
     { name = "numpy" },
     { name = "opencv-python" },
     { name = "plyfile" },
+    { name = "simple-knn" },
     { name = "torch" },
     { name = "torchaudio" },
     { name = "torchvision" },
@@ -68,10 +100,12 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "fused-ssim", editable = "submodules/fused-ssim" },
     { name = "joblib", specifier = ">=1.5.3" },
     { name = "numpy", specifier = ">=2.4.2" },
     { name = "opencv-python", specifier = ">=4.13.0.92" },
     { name = "plyfile", specifier = ">=1.1.3" },
+    { name = "simple-knn", editable = "submodules/simple-knn" },
     { name = "torch", specifier = ">=2.10.0" },
     { name = "torchaudio", specifier = ">=2.10.0" },
     { name = "torchvision", specifier = ">=0.25.0" },
@@ -449,6 +483,17 @@ sdist = { url = "https://files.pythonhosted.org/packages/82/f3/748f4d6f65d1756b9
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e1/c6/76dc613121b793286a3f91621d7b75a2b493e0390ddca50f11993eadf192/setuptools-82.0.0-py3-none-any.whl", hash = "sha256:70b18734b607bd1da571d097d236cfcfacaf01de45717d59e6e04b96877532e0", size = 1003468, upload-time = "2026-02-08T15:08:38.723Z" },
 ]
+
+[[package]]
+name = "simple-knn"
+version = "0.1.0"
+source = { editable = "submodules/simple-knn" }
+dependencies = [
+    { name = "torch" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "torch" }]
 
 [[package]]
 name = "sympy"
