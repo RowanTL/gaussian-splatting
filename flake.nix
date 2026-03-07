@@ -34,6 +34,8 @@
             # numpy
           ]))
           pkgs.uv
+          colmapWithCuda
+          imagemagick
         ];
         buildInputs = with pkgs; [
          git gitRepo gnupg autoconf curl
