@@ -86,6 +86,7 @@ name = "gaussian-splatting"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "diff-gaussian-rasterization" },
     { name = "fused-ssim" },
     { name = "joblib" },
     { name = "numpy" },
@@ -100,6 +101,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "diff-gaussian-rasterization", editable = "submodules/diff-gaussian-rasterization" },
     { name = "fused-ssim", editable = "submodules/fused-ssim" },
     { name = "joblib", specifier = ">=1.5.3" },
     { name = "numpy", specifier = ">=2.4.2" },

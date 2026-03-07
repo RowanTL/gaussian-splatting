@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "diff-gaussian-rasterization",
     "fused-ssim",
     "joblib>=1.5.3",
     "numpy>=2.4.2",
@@ -37,3 +38,4 @@ members = [
 [tool.uv.sources]
 fused-ssim = { workspace = true }
 simple-knn = { workspace = true }
+diff-gaussian-rasterization = { workspace = true }
