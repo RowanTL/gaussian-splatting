@@ -36,6 +36,7 @@
           pkgs.uv
           pkgs.colmapWithCuda
           pkgs.imagemagick
+          pkgs.ffmpeg
         ];
         buildInputs = with pkgs; [
          git gitRepo gnupg autoconf curl
