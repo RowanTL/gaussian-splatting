@@ -8,7 +8,8 @@
 	branch = dr_aa
 [submodule "SIBR_viewers"]
 	path = SIBR_viewers
-	url = https://gitlab.inria.fr/sibr/sibr_core.git
+	url = https://github.com/RowanTL/SIBR_viewers.git
+	branch = gaussian_code_release_union
 [submodule "submodules/fused-ssim"]
 	path = submodules/fused-ssim
 	url = https://github.com/rahul-goel/fused-ssim.git
